@@ -1,10 +1,12 @@
 name: dghub_language
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: Min Thant Htet.
+version: 1.0.0
+homepage: https://pub.dghub.in
+repository: https://github.com/DGFlutterPub/dghub_language
+issue_tracker: https://github.com/DGFlutterPub/dghub_language/issues
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
+  sdk: ">=3.2.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
