@@ -5,6 +5,7 @@ import 'package:dghub_language/src/language_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 
 class DGHubLanguage extends StatelessWidget {
@@ -15,8 +16,8 @@ class DGHubLanguage extends StatelessWidget {
 
   static init() async {
     if (!kIsWeb) {
-      var path = Directory.current.path;
-      Hive.init(path);
+      var dr = await getApplicationSupportDirectory();
+      Hive.init(dr.path);
     }
 
     await Hive.openBox('language');
