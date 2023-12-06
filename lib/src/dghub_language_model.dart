@@ -1,3 +1,5 @@
+part 'dghub_language_model.g.dart';
+
 class DGHubLanguageModel {
   String id;
   String name;
@@ -10,4 +12,7 @@ class DGHubLanguageModel {
     required this.code,
     this.data,
   });
+  factory DGHubLanguageModel.fromJson(Map<String, dynamic> json) =>
+      _$DGHubLanguageModelFromJson(json);
+  Map<String, dynamic> toJson() => _$DGHubLanguageModelToJson(this);
 }
